@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { Dashboard, Preferences, Login } from './components';
 import { useRoutes } from 'react-router-dom';
+import { useToken } from './useToken';
 
 function App() {
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
 
   let element = useRoutes([
     {
